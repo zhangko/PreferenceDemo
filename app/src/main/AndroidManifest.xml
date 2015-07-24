@@ -24,6 +24,8 @@
         <activity android:name=".DataBaseActivity"></activity>
         <activity android:name=".GreenDaoActivity"></activity>
         <activity android:name=".TestActivity"></activity>
+        <activity android:name=".FinishActivity"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

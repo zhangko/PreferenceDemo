@@ -1,6 +1,7 @@
 package com.jiuan.app.preferencedemo;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -28,10 +29,16 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Bind(R.id.database)
     Button database;
 
+    @Bind(R.id.finish_button)
+    Button button_finish;
+
+    private final static String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        log("onCreate");
 
         ButterKnife.bind(this);
 
@@ -61,7 +68,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
-    @OnClick({R.id.config,R.id.database})
+    @OnClick({R.id.config,R.id.database,R.id.finish_button})
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -74,6 +81,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 Intent databaseintent = new Intent(MainActivity.this,DataBaseActivity.class);
                 startActivity(databaseintent);
                 break;
+            case R.id.finish_button:
+                Intent finish_intent = new Intent(MainActivity.this,FinishActivity.class);
+                startActivity(finish_intent);
+                break;
+
         }
 
     }
@@ -89,5 +101,73 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
         }
         return replacestring;
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+
+        log("onRestart");
+
+
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        log("onResume");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+
+        log("onSaveInstanceState");
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle onSavedInstanceState){
+        super.onRestoreInstanceState(onSavedInstanceState);
+        log("onRestoreInstanceState");
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig){
+        super.onConfigurationChanged(newConfig);
+        log("onConfigurationChanged");
+
+    }
+
+    @Override
+    public void onPostCreate(Bundle savedInstanceState){
+        super.onPostCreate(savedInstanceState);
+        log("onPostCreate");
+    }
+
+    @Override
+    public void onPostResume(){
+        super.onPostResume();
+        log("onPostResume");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        log("onPause");
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        log("onStop");
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        log("onDestroy");
+    }
+
+    private void log(String msg){
+        Log.d(TAG,msg);
     }
 }

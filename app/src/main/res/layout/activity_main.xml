@@ -32,5 +32,11 @@
         android:id="@+id/database"
         android:text="测试数据库"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:id="@+id/finish_button"/>
+
 
     </LinearLayout>
