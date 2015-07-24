@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">偏好设置例子</string>
+
+    <string name="hello_world">你好！</string>
+    <string name="action_settings">设置</string>
+    <!--//设置界面用户preference-->
+    <string name="settings_user">用户</string>
+    <string name="settings_logout">注销</string>
+    <string name="settings_net">网络</string>
+    <string name="settings_wifi">只在wifi打开的时候下载</string>
+    <string name="settings_notify">接收通知</string>
+    <string name="settings_voice">声音</string>
+    <string name="settings_tipvoice">提示音</string>
+</resources>

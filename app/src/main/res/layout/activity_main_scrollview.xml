@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/config"
+        android:text="设置"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="题目"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一种可供用户滚动的层次结构布局容器，允许显示比实际多的内容。ScrollView是一种FrameLayout，意味需要在其上放置有自己滚动内容的子元素。子元素可以是一个复杂的对象的布局管理器。通常用的子元素是垂直方向的LinearLayout，显示在最上层的垂直方向可以让用户滚动的箭头。
+
+TextView类也有自己的滚动功能，所以不需要使用ScrollView，但是只有两个结合使用，才能保证显示较多内容时候的效率。但只有两者结合使用才可以实现在一个较大的容器中一个文本视图效果。"
+       android:textSize="30dp" />
+
+</ScrollView>

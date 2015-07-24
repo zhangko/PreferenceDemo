@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PreferenceDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!--//设置界面用户preference-->
+    <string name="settings_user">user</string>
+    <string name="settings_logout">logout</string>
+    <string name="settings_net">network</string>
+    <string name="settings_wifi">only download in wifi</string>
+    <string name="settings_notify">accept notify</string>
+    <string name="settings_voice">voice</string>
+    <string name="settings_tipvoice">tip-voice</string>
+
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_user">
+        <Preference
+            android:key="logout"
+            android:title="@string/settings_logout" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_net">
+        <SwitchPreference
+            android:key="only_wifi_download"
+            android:title="@string/settings_wifi"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:key="accept_notify"
+            android:title="@string/settings_notify"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="@string/settings_voice">
+
+            <PreferenceScreen
+                android:title="@string/settings_voice"
+                android:summary="显示另一个声音设置"
+                >
+                <PreferenceCategory
+                    android:title="@string/settings_voice">
+                    <SwitchPreference
+                        android:key="open_tips"
+                        android:title="@string/settings_tipvoice"
+                        android:defaultValue="false"/>
+                </PreferenceCategory>
+
+                <PreferenceCategory
+                    android:title="@string/settings_voice">
+                    <SwitchPreference
+                        android:key="open_tips"
+                        android:title="@string/settings_tipvoice"
+                        android:defaultValue="false"/>
+                </PreferenceCategory>
+
+                <PreferenceCategory
+                    android:title="@string/settings_voice">
+                    <SwitchPreference
+                        android:key="open_tips"
+                        android:title="@string/settings_tipvoice"
+                        android:defaultValue="false"/>
+                </PreferenceCategory>
+
+                <PreferenceCategory
+                    android:title="@string/settings_voice">
+                    <SwitchPreference
+                        android:key="open_tips"
+                        android:title="@string/settings_tipvoice"
+                        android:defaultValue="false"/>
+                </PreferenceCategory>
+            </PreferenceScreen>
+
+        </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_net">
+        <SwitchPreference
+            android:key="only_wifi_download"
+            android:title="@string/settings_wifi"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:key="accept_notify"
+            android:title="@string/settings_notify"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="偏好属性">
+        <CheckBoxPreference
+            android:key="parent_checkbox_preference"
+            android:title="父开关"
+            android:summary="这是一个父开关" />
+        <CheckBoxPreference
+            android:key="child_checkbox_preference"
+
+            android:layout="?android:attr/preferenceLayoutChild"
+            android:title="子开关"
+            android:summary="这是一个子开关" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="基于对话框的偏好">
+        <EditTextPreference
+            android:key="edittext_preference"
+            android:title="文本输入偏好"
+            android:summary="使用一个文本框对话框"
+            android:dialogTitle="输入你的宠物" />
+        <ListPreference
+            android:key="list_preference"
+            android:title="列表偏好"
+            android:summary="使用一个列表对话框"
+            android:dialogTitle="选择一个" />
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
