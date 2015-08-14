@@ -97,6 +97,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
            e.printStackTrace();
        }
 
+        
+
     }
 
     private String replacechar(String str,char dst,char src){
