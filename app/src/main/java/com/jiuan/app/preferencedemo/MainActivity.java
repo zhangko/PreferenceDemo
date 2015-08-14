@@ -76,6 +76,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.config:
                 Intent intent = new  Intent(MainActivity.this,PreferenceActivity.class);
                 startActivity(intent);
+                log("已经进入了设置界面！！！！！");
                 break;
             case R.id.database:
                 Intent databaseintent = new Intent(MainActivity.this,DataBaseActivity.class);
@@ -86,7 +87,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 startActivity(finish_intent);
                 break;
 
+
+
         }
+        log("进行完了switch选择进入新的界面！！！！！");
+       try{
+           Thread.sleep(3000);
+       }catch (InterruptedException e){
+           e.printStackTrace();
+       }
 
     }
 
@@ -153,6 +162,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     protected void onPause(){
         super.onPause();
         log("onPause");
+        for(int i = 0; i < 100; i++){
+            log("onPause:" + i);
+        }
     }
 
     @Override
@@ -165,6 +177,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     protected void onDestroy(){
         super.onDestroy();
         log("onDestroy");
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        log("onStart");
     }
 
     private void log(String msg){
